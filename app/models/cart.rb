@@ -10,4 +10,17 @@ class Cart < ApplicationRecord
 
     @count
   end
+
+
+
+
+  def total_price_in_dollars
+    @total = 0
+    order_items.all.each do |item|
+      @total = @total + item.product.price_in_dollars * item.quantity
+    end
+    @total
+  end
+
+
 end

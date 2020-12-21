@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
   before_action :current_cart
   helper_method :current_cart
-  
+
   def current_cart
    #if the customer has just landed on the site, given them a brand new cart
    #if they already have one, keep it
