@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "info", to: "pages#info"
   root 'pages#home'
 
+  resource :cart
+
 end

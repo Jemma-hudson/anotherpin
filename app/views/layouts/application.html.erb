@@ -17,14 +17,14 @@
       <nav>
         <%= link_to "Shop", products_path %>
         <%= link_to "Info", info_path %>
-        <%= link_to  "#"  do %>
-          Cart #<%= @current_cart.id %> (0)
+        <%= link_to  cart_path  do %>
+          Cart (<%= @current_cart.total_quanity %>)
         <% end %>
       </nav>
     </header>
 
     <% if flash[:success].present? %>
-      <div class="flass-sucess">
+      <div class="flash-success">
         <%= flash[:success] %>
       </div>
     <% end%>
